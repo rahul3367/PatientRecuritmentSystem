@@ -1,0 +1,33 @@
+[project]
+name = "clinical-trial-backend"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "anthropic>=0.122.0",
+    "bcrypt>=5.0.0",
+    "fastapi>=0.141.1",
+    "groq>=1.6.0",
+    "pandas>=3.0.5",
+    "psycopg2-binary>=2.9.12",
+    "pydantic>=2.13.4",
+    "pydantic-settings>=2.15.0",
+    "pyjwt>=2.13.0",
+    "pypdf2>=3.0.1",
+    "python-dotenv>=1.2.2",
+    "python-multipart>=0.0.32",
+    "rapidfuzz>=3.14.5",
+    "reportlab>=5.0.0",
+    "sqlalchemy>=2.0.52",
+    "uvicorn[standard]>=0.52.3",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+

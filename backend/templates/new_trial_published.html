@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Clinical Trial Available</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background-color: #f8fafc;
+      margin: 0;
+      padding: 24px;
+      color: #1e293b;
+    }
+    .email-container {
+      max-width: 600px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 8px;
+      border: 1px solid #e2e8f0;
+      overflow: hidden;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+    .header {
+      background: #0f172a;
+      color: #ffffff;
+      padding: 24px 32px;
+    }
+    .header h1 {
+      margin: 0;
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+    .header p {
+      margin: 4px 0 0 0;
+      font-size: 13px;
+      color: #94a3b8;
+    }
+    .content {
+      padding: 32px;
+      line-height: 1.6;
+    }
+    .greeting {
+      font-size: 16px;
+      font-weight: 600;
+      color: #0f172a;
+      margin-bottom: 16px;
+    }
+    .trial-card {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-left: 4px solid #0284c7;
+      border-radius: 6px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+    .trial-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 6px;
+    }
+    .trial-id {
+      display: inline-block;
+      background: #e0f2fe;
+      color: #0369a1;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 4px;
+      margin-bottom: 12px;
+    }
+    .trial-desc {
+      font-size: 14px;
+      color: #475569;
+      margin: 0;
+    }
+    .instructions {
+      font-size: 14px;
+      color: #334155;
+      margin-top: 24px;
+      padding-top: 16px;
+      border-top: 1px solid #e2e8f0;
+    }
+    .footer {
+      background: #f1f5f9;
+      padding: 20px 32px;
+      font-size: 12px;
+      color: #64748b;
+      border-top: 1px solid #e2e8f0;
+    }
+  </style>
+</head>
+<body>
+  <div class="email-container">
+    <div class="header">
+      <h1>AegisTrial Clinical Platform</h1>
+      <p>Study Notification Service</p>
+    </div>
+    <div class="content">
+      <div class="greeting">Dear {{ patient_name }},</div>
+      <p>A new clinical trial is now available on AegisTrial:</p>
+      
+      <div class="trial-card">
+        <div class="trial-id">Trial ID: {{ trial_id }}</div>
+        <div class="trial-title">{{ trial_name }}</div>
+        {% if trial_description %}
+        <p class="trial-desc">{{ trial_description }}</p>
+        {% endif %}
+      </div>
+
+      <div class="instructions">
+        <p>Please log in to your AegisTrial Patient Portal to review the trial.</p>
+        <p style="margin-top: 16px; font-weight: 600; color: #0f172a;">— AegisTrial Clinical Research Team</p>
+      </div>
+    </div>
+    <div class="footer">
+      This is an automated notification from AegisTrial. Please do not reply directly to this email. To view active studies and manage your profile, sign in to your secure patient account.
+    </div>
+  </div>
+</body>
+</html>
